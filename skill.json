@@ -1,0 +1,26 @@
+{
+  "name": "genpark-personal-agent-postprandial-somnolence-glycemic-dip-skill",
+  "version": "1.0.0",
+  "description": "Calculates meal Glycemic Load (GL), Postprandial Somnolence Index (PSI), lateral hypothalamic orexin silencing, and prescribes glucose-clearing walking protocols.",
+  "tools": [
+    {
+      "name": "evaluate_meal_somnolence_risk",
+      "description": "Calculates Glycemic Load (GL), Postprandial Somnolence Index (PSI: 0-100), and orexin suppression.",
+      "parameters": {
+        "carbohydrate_grams": "float (default 85.0)",
+        "glycemic_index": "float (default 72.0)",
+        "protein_grams": "float (default 30.0)",
+        "fat_grams": "float (default 25.0)",
+        "meal_calories": "float (default 685.0)"
+      }
+    },
+    {
+      "name": "prescribe_postprandial_countermeasure",
+      "description": "Prescribes GLUT4 glucose-clearing walking timing and duration post-meal.",
+      "parameters": {
+        "psi_score": "float (default 65.0)",
+        "meal_time_24h": "float (default 12.5)"
+      }
+    }
+  ]
+}
